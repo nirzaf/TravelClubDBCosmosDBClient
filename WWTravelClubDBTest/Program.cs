@@ -51,8 +51,7 @@ namespace WWTravelClubDBTest
             Console.ReadKey();
 
             var toModify = context.Destinations
-                .Where(m => m.Name == "Florence")
-                .FirstOrDefault();
+                .FirstOrDefault(m => m.Name == "Florence");
 
             toModify.Description =
                 "Florence is a famous historical Italian town";
